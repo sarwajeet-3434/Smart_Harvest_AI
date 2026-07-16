@@ -66,7 +66,7 @@ https://smart-harvest-ai.vercel.app/
 
 The full research paper detailing the methodology, dataset, model comparisons, and results is available here:
 
-**📎 [Read the Full Research Paper](YOUR_DRIVE_LINK_HERE)**
+**📎 [Read the Full Research Paper](https://drive.google.com/file/d/1lL_l92IgePxDMy0FwG66rvTBDqbNGvx8/view?usp=sharing)**
 
 ---
 
