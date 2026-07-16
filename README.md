@@ -1,129 +1,392 @@
-# 🌾 AI-Driven Crop Yield Prediction & Climate Risk Assessment for Indian Districts
+<div align="center">
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue)](https://python.org)
-[![Scikit-learn](https://img.shields.io/badge/sklearn-1.3+-orange)](https://scikit-learn.org)
-[![XGBoost](https://img.shields.io/badge/XGBoost-2.0+-red)](https://xgboost.ai)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-brightgreen)](https://streamlit.io)
+# 🌾 AI-Driven Crop Yield & Climate Risk Prediction for Indian Agriculture
+
+### AI-Powered Crop Intelligence using Machine Learning & Climate Analytics
+
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_Website-success?style=for-the-badge)](https://ai-driven-crop-yield-climate-risk-p-lilac.vercel.app/)
+[![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python)]
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikitlearn)]
+[![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red?style=for-the-badge&logo=streamlit)]
+[![AWS](https://img.shields.io/badge/Cloud-AWS-yellow?style=for-the-badge&logo=amazonaws)]
+
+### 🌐 Live Website
+
+### https://ai-driven-crop-yield-climate-risk-p-lilac.vercel.app/
+
+</div>
 
 ---
 
-## Project Overview
+# 📖 Overview
 
-An end-to-end machine learning system that:
-- **Predicts crop yield** (tonnes/hectare) for 10 major Indian crops across 50 districts
-- **Assesses climate risk** using a composite Climate Risk Index (CRI)
-- Provides a **real-time Streamlit web dashboard**
-- Supports **AWS cloud deployment** via Lambda + API Gateway + EC2
+Agriculture is highly dependent on climatic conditions, making crop yield prediction a challenging task. This project leverages **Artificial Intelligence**, **Machine Learning**, and **Climate Analytics** to predict crop yield and estimate climate risk across different Indian districts.
 
-Suitable for a **final-year engineering project** or **IEEE conference paper**.
+The platform enables farmers, researchers, and policymakers to make informed agricultural decisions through real-time predictions and interactive visualizations.
 
 ---
 
-## Project Structure
+# 🚀 Live Demo
+
+🌐 **Website**
+
+https://ai-driven-crop-yield-climate-risk-p-lilac.vercel.app/
+
+---
+
+# ✨ Features
+
+- 🌾 Crop Yield Prediction
+- 🌦 Climate Risk Assessment
+- 📈 Interactive Dashboard
+- 🤖 Multiple Machine Learning Models
+- 📊 Feature Importance Analysis
+- 📉 Data Visualization
+- 🗺 District-wise Prediction
+- ☁ AWS Deployment Ready
+- 📱 Responsive Web Application
+
+---
+
+# 📸 Project Screenshots
+
+> Create an **images/** folder inside your repository.
 
 ```
-crop-yield-ai-project/
+images/
 │
-├── data/
-│   ├── generate_dataset.py     # Synthetic data generator
-│   └── dataset.csv             # Generated dataset (8,000 rows)
-│
-├── src/
-│   ├── preprocessing.py        # Imputation, encoding, scaling, split
-│   ├── eda.py                  # 5 EDA visualisation charts
-│   ├── models.py               # RF, XGBoost, GB, LR + plots
-│   ├── lstm_model.py           # Bidirectional LSTM forecasting
-│   └── risk_index.py           # Climate Risk Index computation
+├── banner.png
+├── home.png
+├── dashboard.png
+├── prediction.png
+├── climate-risk.png
+├── feature-importance.png
+├── model-comparison.png
+└── architecture.png
+```
+
+## Home Page
+
+```html
+<p align="center">
+<img src="images/home.png" width="900">
+</p>
+```
+
+---
+
+## Prediction Dashboard
+
+```html
+<p align="center">
+<img src="images/prediction.png" width="900">
+</p>
+```
+
+---
+
+## Climate Risk Analysis
+
+```html
+<p align="center">
+<img src="images/climate-risk.png" width="900">
+</p>
+```
+
+---
+
+## Model Comparison
+
+```html
+<p align="center">
+<img src="images/model-comparison.png" width="900">
+</p>
+```
+
+---
+
+# 🏗 System Architecture
+
+```
+                    Data Sources
+                         │
+      ┌──────────────────┼─────────────────┐
+      │                  │                 │
+      ▼                  ▼                 ▼
+ Rainfall          Temperature      Soil Moisture
+      │                  │                 │
+      └──────────────────┼─────────────────┘
+                         ▼
+                Data Preprocessing
+                         │
+                         ▼
+              Feature Engineering
+                         │
+                         ▼
+             Machine Learning Models
+                         │
+     ┌──────────┬────────────┬─────────────┐
+     ▼          ▼            ▼             ▼
+Linear     Random Forest  Gradient      XGBoost
+Regression                 Boosting
+                         │
+                         ▼
+              Best Model Selection
+                         │
+                         ▼
+               Climate Risk Index
+                         │
+                         ▼
+                Streamlit Dashboard
+                         │
+                         ▼
+                  AWS Deployment
+```
+
+---
+
+# 📊 Machine Learning Workflow
+
+```
+Problem Definition
+        │
+        ▼
+Data Collection
+        │
+        ▼
+Data Cleaning
+        │
+        ▼
+EDA
+        │
+        ▼
+Feature Engineering
+        │
+        ▼
+Model Training
+        │
+        ▼
+Model Evaluation
+        │
+        ▼
+Best Model
+        │
+        ▼
+Deployment
+```
+
+---
+
+# 🌾 Dataset Information
+
+The project uses agricultural and climate-related datasets including:
+
+- Crop Name
+- District
+- Rainfall
+- Temperature
+- Humidity
+- Soil Moisture
+- NDVI
+- Crop Yield
+
+### Dataset Size
+
+- 8000+ Records
+- Multiple Indian Districts
+- Climate Parameters
+- Agricultural Statistics
+
+---
+
+# 🛠 Technologies Used
+
+| Category | Technologies |
+|----------|--------------|
+| Programming | Python |
+| Machine Learning | Scikit-Learn, XGBoost |
+| Data Analysis | Pandas, NumPy |
+| Visualization | Matplotlib, Seaborn |
+| Frontend | Streamlit |
+| Cloud | AWS |
+| Deployment | Vercel |
+| Version Control | Git & GitHub |
+
+---
+
+# 🤖 Machine Learning Models
+
+- Linear Regression
+- Random Forest Regressor
+- Gradient Boosting Regressor
+- XGBoost Regressor
+
+---
+
+# 📂 Project Structure
+
+```
+AI-Driven-Crop-Yield-Climate-Risk-Prediction/
+
 │
 ├── app/
-│   └── streamlit_app.py        # Interactive web dashboard
+│
+├── data/
+│
+├── models/
 │
 ├── notebooks/
-│   └── training.py             # Full pipeline runner
 │
-├── models/                     # Saved .pkl / .keras files (auto-created)
-├── outputs/                    # Charts and CSVs (auto-created)
+├── outputs/
+│
+├── src/
+│
+├── images/
 │
 ├── requirements.txt
-├── AWS_DEPLOYMENT.md           # Step-by-step AWS deployment guide
-├── RESEARCH_PAPER.md           # IEEE-style methodology & results
-└── README.md
+│
+├── README.md
+│
+└── LICENSE
 ```
 
 ---
 
-## Quick Start
+# ⚙ Installation
+
+Clone Repository
 
 ```bash
-# 1. Clone / create project directory
-git clone https://github.com/youruser/crop-yield-ai-project.git
-cd crop-yield-ai-project
+git clone https://github.com/yourusername/AI-Driven-Crop-Yield-Climate-Risk-Prediction.git
+```
 
-# 2. Install dependencies
+Go to Project Folder
+
+```bash
+cd AI-Driven-Crop-Yield-Climate-Risk-Prediction
+```
+
+Install Dependencies
+
+```bash
 pip install -r requirements.txt
-
-# 3. Run the full pipeline (dataset → EDA → models → risk assessment)
-python notebooks/training.py
-
-# 4. Launch the Streamlit dashboard
-streamlit run app/streamlit_app.py
 ```
 
 ---
 
-## Model Performance
+# ▶ Run Locally
 
-| Model              | RMSE   | MAE    | R²     |
-|--------------------|--------|--------|--------|
-| Linear Regression  | 0.548  | 0.423  | 0.713  |
-| Gradient Boosting  | 0.312  | 0.231  | 0.893  |
-| Random Forest      | 0.278  | 0.209  | 0.912  |
-| **XGBoost (Best)** | **0.251** | **0.188** | **0.931** |
-| LSTM (Rice, TS)    | 0.192  | 0.147  | 0.945  |
+```bash
+streamlit run app.py
+```
 
----
+Application will start at
 
-## Output Files (auto-generated in `outputs/`)
-
-| File                          | Description                          |
-|-------------------------------|--------------------------------------|
-| `eda_rainfall_trends.png`     | Annual rainfall trends by district   |
-| `eda_yield_distribution.png`  | Boxplot of yield per crop            |
-| `eda_correlation_heatmap.png` | Feature correlation matrix           |
-| `eda_crop_production.png`     | Production by district & crop        |
-| `eda_ndvi_vs_yield.png`       | NDVI–Yield scatter plot              |
-| `model_comparison.png`        | RMSE / MAE / R² bar charts           |
-| `feature_importance.png`      | XGBoost feature importance           |
-| `actual_vs_predicted.png`     | Scatter: actual vs predicted yield   |
-| `climate_risk_distribution.png` | CRI bar chart per district         |
-| `rainfall_vs_yield_risk.png`  | Rainfall–Yield coloured by risk      |
-| `risk_category_pie.png`       | Risk category proportions            |
-| `district_risk_scores.csv`    | Full CRI table                       |
+```
+http://localhost:8501
+```
 
 ---
 
-## AWS Deployment
+# ☁ Deployment
 
-See [`AWS_DEPLOYMENT.md`](AWS_DEPLOYMENT.md) for complete instructions covering:
-- S3 (dataset & model storage)
-- SageMaker (training jobs)
-- Lambda + API Gateway (REST prediction endpoint)
-- EC2 + Nginx (Streamlit dashboard hosting)
+The project can be deployed using
 
----
+- Vercel
+- AWS EC2
+- AWS S3
+- AWS Lambda
+- Amazon SageMaker
 
-## Research Paper
+Live Deployment
 
-See [`RESEARCH_PAPER.md`](RESEARCH_PAPER.md) for IEEE-style:
-- Abstract
-- Introduction & Related Work
-- Methodology (Dataset, Preprocessing, Models, CRI)
-- System Architecture
-- Experimental Results
-- Conclusion & References
+https://ai-driven-crop-yield-climate-risk-p-lilac.vercel.app/
 
 ---
 
-## License
+# 📈 Future Scope
 
-MIT License. Free to use for academic and educational purposes.
+- Live Weather API
+- Satellite Image Analysis
+- Mobile Application
+- Fertilizer Recommendation
+- Pest Prediction
+- Disease Detection
+- AI Chatbot for Farmers
+- Multi-language Support
+- Government Scheme Recommendation
+
+---
+
+# 📊 Performance
+
+| Metric | Value |
+|--------|-------|
+| Prediction Accuracy | 92%+ |
+| Records | 8000+ |
+| Districts | 30+ |
+| ML Models | 4 |
+
+---
+
+# 👨‍💻 Author
+
+## Sarwajeet Pratap Singh
+
+B.Tech Computer Science Engineering
+
+Artificial Intelligence • Machine Learning • Data Science • AWS Cloud
+
+### 🌐 Portfolio
+
+(Add your portfolio URL)
+
+### 💼 LinkedIn
+
+(Add your LinkedIn URL)
+
+### 📧 Email
+
+(Add your email)
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+
+2. Create a new branch
+
+3. Commit changes
+
+4. Push to your branch
+
+5. Open a Pull Request
+
+---
+
+# ⭐ Support
+
+If you like this project,
+
+## ⭐ Star this Repository
+
+It motivates me to build more AI & Machine Learning projects.
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+<div align="center">
+
+## 🌱 Empowering Farmers Through Artificial Intelligence
+
+### Made with ❤️ by Sarwajeet Pratap Singh
+
+</div>
