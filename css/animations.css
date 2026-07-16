@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Animations — kept isolated so motion can be toggled/reduced independently
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Typing effect caret */
+.type-caret{
+  display:inline-block; width:3px; height:1em; background: var(--accent);
+  margin-left:4px; vertical-align:-0.15em; animation: blink 1s step-end infinite;
+}
+@keyframes blink{ 50%{ opacity:0; } }
+
+/* Magnetic buttons — JS sets --mx/--my */
+.magnetic{ transition: transform .18s ease-out; }
+
+/* Floating field-grid particles in hero */
+.grid-cell{ transition: fill .6s ease; }
+
+/* Counter number tick */
+.count-up{ font-variant-numeric: tabular-nums; }
+
+/* Fade/scale in for modals & result panels */
+@keyframes popIn{
+  from{ opacity:0; transform: scale(.96) translateY(8px); }
+  to{ opacity:1; transform: scale(1) translateY(0); }
+}
+.pop-in{ animation: popIn .45s cubic-bezier(.2,.8,.2,1) both; }
+
+/* Spinner for prediction loading */
+.spinner{
+  width:20px; height:20px; border-radius:50%;
+  border: 2px solid rgba(255,255,255,.25); border-top-color: currentColor;
+  animation: spin .7s linear infinite;
+}
+@keyframes spin{ to{ transform: rotate(360deg); } }
+
+/* Gauge ring fill animation driven via stroke-dashoffset in JS */
+.gauge-ring{ transition: stroke-dashoffset 1.1s cubic-bezier(.16,1,.3,1); }
+
+/* Scan-line sweep used on section dividers and hero backdrop */
+@keyframes sweepX{
+  from{ transform: translateX(-30%); }
+  to{ transform: translateX(30%); }
+}
+.sweep{ animation: sweepX 6s ease-in-out infinite alternate; }
+
+/* Subtle float for hero satellite icon / illustration */
+@keyframes floatY{
+  0%,100%{ transform: translateY(0); }
+  50%{ transform: translateY(-10px); }
+}
+.float{ animation: floatY 5s ease-in-out infinite; }
+
+/* Bar chart grow-in (JS toggles .grown after IO trigger) */
+.bar-fill{ transform: scaleX(0); transform-origin:left; transition: transform 1s cubic-bezier(.16,1,.3,1); }
+.grown .bar-fill{ transform: scaleX(1); }
+.bar-fill-v{ transform: scaleY(0); transform-origin:bottom; transition: transform 1s cubic-bezier(.16,1,.3,1); }
+.grown .bar-fill-v{ transform: scaleY(1); }
+
+/* Pie/donut stroke draw-in */
+.stroke-draw{ transition: stroke-dashoffset 1.2s cubic-bezier(.16,1,.3,1); }
+
+/* Line chart path draw */
+.path-draw{ stroke-dasharray: 1400; stroke-dashoffset: 1400; transition: stroke-dashoffset 1.6s ease; }
+.grown .path-draw{ stroke-dashoffset: 0; }
+
+/* Hover-tilt card (JS updates transform) */
+.tilt{ transition: transform .25s ease; will-change: transform; }
