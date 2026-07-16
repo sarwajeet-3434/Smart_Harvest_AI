@@ -14,7 +14,7 @@
 
 ### 🌐 Live Demo
 
-**https://ai-driven-crop-yield-climate-risk-p-lilac.vercel.app/**
+**https://smart-harvest-ai.vercel.app/**
 
 </div>
 
